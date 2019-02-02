@@ -1,13 +1,11 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
-
 var widthH = cvs.width;
 var heightH = cvs.height;
 var unitBox = 10;
 var snake = [];
 var dec=0;
 var score = 0;
-
 var color = ['red', 'blue', 'yellow', 'black', 'grey', 'green', 'orange','teal','purple','maroon','lime','olive','navy','aqua',
 'fuchsia','silver'];
 
@@ -70,6 +68,8 @@ let food = {
 
 
 function draw(){
+    ctx.fillStyle = '#7CFC00';
+    ctx.fillRect(0,0,700,700);
     
     for(i=0;i<snake.length;i++)
         {
@@ -118,16 +118,21 @@ function draw(){
     var newHead = {x:snakeX,y:snakeY};
     
     // GAME OVER CONDITIONS
-    if(snakeX < unitBox || snakeX > 70 * unitBox || snakeY < unitBox || snakeY > 70 * unitBox || collision(newHead,snake))
+    if(snakeX < 0 || snakeX > 70 * unitBox || snakeY < 0 || snakeY > 70 * unitBox)
         {
-           // clearInterval(game);
+            clearInterval(game);
+             
         }
+    
+    
+    
     
     snake.unshift(newHead); 
     
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
-    ctx.fillText(score,0,0)
+    ctx.fillText(score,20,20);
+   
 }
 
-var game =setInterval(draw,60);
+var game =setInterval(draw,100);
