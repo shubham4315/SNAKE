@@ -1,3 +1,2 @@
 # SNAKE
-snake game using html/javascript.
-It is a classic snake game which uses pure javascript and html.
+🐍 Looking for a fun and challenging game to play? Look no further than my latest project! 💻 Built with JavaScript and HTML Canvas, this classic snake game offers a unique and engaging experience for players of all skill levels. 🎮 With customizable controls and dynamic gameplay, this project showcases my technical skills in game development and web programming. 🔥 Whether you're looking to improve your reflexes or just want to have some fun, this game is sure to keep you entertained for hours on end. 🚀
